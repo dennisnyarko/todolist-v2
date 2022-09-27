@@ -65,6 +65,8 @@ app.post("/", function(req, res){
 
   item.save();
 
+  res.redirect("/");
+
   
 });
 
