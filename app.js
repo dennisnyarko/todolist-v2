@@ -70,6 +70,10 @@ app.post("/", function(req, res){
   
 });
 
+app.post("/delete", function(req, res){
+  console.log(req.body);
+});
+
 app.get("/work", function(req,res){
   res.render("list", {listTitle: "Work List", newListItems: workItems});
 });
