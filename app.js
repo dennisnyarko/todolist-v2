@@ -71,7 +71,7 @@ app.post("/", function(req, res){
 });
 
 app.post("/delete", function(req, res){
-  console.log(req.body);
+  console.log(req.body.checkbox);
 });
 
 app.get("/work", function(req,res){
