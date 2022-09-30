@@ -64,6 +64,13 @@ res.redirect("/");
 app.get("/:customListName", function(req, res){
   const customListName = req.params.customListName;
 
+  const list = new List({
+    name: customListName,
+    items: defaultItems
+  });
+
+  list.save();
+
 });
 
 
