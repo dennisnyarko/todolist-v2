@@ -33,6 +33,11 @@ const item3 = new Item({
 
 const defaultItems = [item1, item2, item3];
 
+const listSchema = {
+  name: String,
+  items: [itemsSchema]
+};
+
 
 app.get("/", function(req, res) {
 
@@ -56,7 +61,8 @@ res.redirect("/");
 });
 
 app.get("/:customListName", function(req, res){
-  console.log(req.params.customListName);
+  const customListName = req.params.customListName;
+
 });
 
 
