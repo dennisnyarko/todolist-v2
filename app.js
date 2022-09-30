@@ -64,6 +64,16 @@ res.redirect("/");
 app.get("/:customListName", function(req, res){
   const customListName = req.params.customListName;
 
+  list.findOne({name: customListName}, function(err, foundList){
+    if (!err){
+      if(!foundList){
+        console.log("Doesn't exist");
+      } else {
+        console.log("Exists!");
+      }
+    }
+  });
+  
   const list = new List({
     name: customListName,
     items: defaultItems
