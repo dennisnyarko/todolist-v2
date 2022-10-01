@@ -103,7 +103,7 @@ app.post("/", function(req, res){
       foundList.items.push(item);
       foundList.save();
       res.redirect("/" + listName);
-    })
+    });
   }
   
 });
