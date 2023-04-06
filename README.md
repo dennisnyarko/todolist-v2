@@ -1,3 +1,3 @@
 # todolist-v2
 
-Updated version of the previous to-do list web application
+Updated version of the simple previous to-do list web application
